@@ -1,0 +1,22 @@
+<br/><br/><br/><br/><br/><br/>
+<div id="about">
+</div>
+
+<script>
+var tags = [ 'Eat', 'Code', 'Bike'];
+var count = 0, elem = document.getElementById('about');
+
+setTimeout('print_about()',500);
+
+function print_about(){
+  if(tags.length === 0){
+    return;
+  }
+  count+=1;
+  elem.innerHTML += tags.shift() + ". ";
+  if(count%4 == 0){
+  elem.innerHTML += "<br/><br/>";
+  }
+  setTimeout('print_about()',500);
+}
+</script>
